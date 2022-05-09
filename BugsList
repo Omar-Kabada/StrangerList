@@ -1,0 +1,74 @@
+-- I will be creating a list of bugs for the application and I will create test scenarios to validate the issues in the future. --
+
+
+
+____________________________________________________
+Bug #1
+
+- Title: 
+Existing entry edit. Edit Image is not working.
+
+- Description:
+Whe the user edits an existing item and selects a new valid image via the "Choose File" button and clicks the "update button", the entry will not show the recently selected image, the entry will show the old image. (No hange to the image is done).
+
+It doesn't matter if the text was edited or not, Text editing is working as expecter.
+
+- Steps to reproduce:
+
+1. Go to URL (http://immense-hollows-74271.herokuapp.com/).
+2. Click on the "Edit" button 
+3. Select a new valid image.
+4. Optional.  You can edit the item text. Enter a valid description.
+5. Click on the "Update Item" button.
+
+Expected result:
+The item edit should show the newly selected image and, if the text was changed, the new text.
+
+Actual result:
+The image of the edited item is not changed.
+
+Console information.
+After clicking the "Update Item", the browser console shows the the message "progress: 100% <imageName.jpg>" from the file "StrangerListController.js:146"
+
+____________________________________________________
+Bug #2
+Title:
+Edit Item. Description text is not being cleared it its larger than max-lenght allowed.
+
+Description:
+When editing an existing item, if the user goes above the max-lenght limiti for the description and cancels the edit, then the over-the-limit text is not being cleared out.
+
+Steps to reproduce:
+
+1. Go to URL (http://immense-hollows-74271.herokuapp.com/).
+2. Click on the "Edit" button.
+3. Enter a text with lenght greater than the max-lenght allowed.
+4. Click on the "Cancel" button to cancel the edit.
+
+Expected result.
+The text area for the description should be cleared from the previously entered text that was bigger than the max-lenght size.
+
+Actual result.
+The edit action is being cancelled but the over-the-limit text in the text area is not being cleared.
+
+There are no error messages en in the console.
+
+____________________________________________________
+Bug #3
+Title:
+Creating new Entry. Image name is not cleared after the new entry has been created.
+
+Description:
+When the users successfully creates a new entry, the name of the selected file is not being cleared from the "Choose File" field.
+
+Steps to reproduce:
+1. Go to URL (http://immense-hollows-74271.herokuapp.com/).
+2. Click on the "Choose File" filed and select a valid image.
+3. Enter a valid text in the "Text" field.
+4. Click on the enabled "Create Item" button.
+
+Expected result:
+After the item is created, the "Choose File" field should be clearing the name of the file selected and show its default text "No file chosen".
+
+Actual result:
+The previously file name chosen is not being cleared from the "Choose File" section.
