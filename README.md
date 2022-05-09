@@ -24,10 +24,13 @@ Alternatively you can import the project to IntelliJ and run the tests individua
 We have a base structure with the Driver and Locator Abstract classes, where our base methods are described, each has its Decorator and Log classes and the WebCoreDriver and WebCoreElement where the final implementation is done.  
 
 Driver -> DriverDecorator -> LoggingDriver -> WebCoreDriver
+
 Element -> ElementDecorator -> LogElement -> WebCoreElement
 
-Driver manages all the actions that the webdriver usually have, we can add actions here as we expand our framework.
-Element manages all the actions that can be performed in our elements, like interactions or getting information from them.
+
+**Driver** manages all the actions that the webdriver usually have, we can add actions here as we expand our framework.
+**Element** manages all the actions that can be performed in our elements, like interactions or getting information from them.
+
 Browser is an enum with the browser name, it is used to pass the info to the webdrivermanager.
 
 
